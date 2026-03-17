@@ -1,0 +1,56 @@
+graph SkyAirlines {
+  label="Sky Airlines - Full Route Network";
+  labelloc=t;
+  fontsize=30;
+  fontname="Arial Bold";
+    fontcolor="black";
+  bgcolor="#FFFFFF";
+  pad=2.0;
+  splines=line;
+  overlap=false;
+  sep="+80";
+  esep="+40";
+
+  node [
+    shape=circle,
+    style=filled,
+    fontcolor="white",
+    fontname="Arial Bold",
+    fontsize=20,
+    width=1.5,
+    height=1.5,
+    penwidth=3,
+    fixedsize=true
+  ];
+
+  edge [
+    fontname="Arial Bold",
+    fontsize=20,
+    fontcolor="black",
+    penwidth=2.5
+  ];
+
+  BLR [fillcolor="#27AE60", color="#1E8449", label="BLR"];
+  DEL [fillcolor="#2980B9", color="#1F618D", label="DEL"];
+  HYD [fillcolor="#E67E22", color="#CA6F1E", label="HYD"];
+  BOM [fillcolor="#8E44AD", color="#6C3483", label="BOM"];
+  MAA [fillcolor="#16A085", color="#0E6655", label="MAA"];
+  KOL [fillcolor="#C0392B", color="#922B21", label="KOL"];
+  AMD [fillcolor="#D4AC0D", color="#B7950B", label="AMD"];
+  GOI [fillcolor="#00BCD4", color="#0097A7", label="GOI"];
+
+  BOM -- DEL [label="Rs.6500  |  2.2h", color="black", penwidth=4];
+  DEL -- BLR [label="Rs.6000  |  2.8h", color="black", penwidth=4];
+  BOM -- KOL [label="Rs.6500  |  2.2h", color="black", penwidth=4];
+  DEL -- KOL [label="Rs.5500  |  2.5h", color="black", penwidth=3];
+  BLR -- KOL [label="Rs.6000  |  3h", color="black", penwidth=4];
+  KOL -- HYD [label="Rs.5500  |  2h", color="black", penwidth=3];
+  DEL -- AMD [label="Rs.4000  |  1.6h", color="black", penwidth=3];
+  BOM -- HYD [label="Rs.4000  |  1.3h", color="black", penwidth=3];
+  BOM -- BLR [label="Rs.4000  |  1.5h", color="black", penwidth=3];
+  BOM -- AMD [label="Rs.3000  |  1h", color="black", penwidth=2];
+  BOM -- GOI [label="Rs.3000  |  1h", color="black", penwidth=2];
+  BLR -- HYD [label="Rs.2800  |  1.2h", color="black", penwidth=2];
+  BLR -- MAA [label="Rs.2200  |  1h", color="black", penwidth=2];
+  MAA -- HYD [label="Rs.3200  |  1.3h", color="black", penwidth=2];
+}
