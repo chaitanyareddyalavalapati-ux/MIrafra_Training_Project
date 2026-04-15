@@ -8,7 +8,7 @@ void runAdmin(Flight_route& f) {
     cout << INFO   << "  2) Add New Airport\n" << RESET;
     cout << INFO   << "  3) View Booking History\n" << RESET;
     cout << INFO   << "  4) Export Network Graph (PNG Image)\n" << RESET;
-    cout << INFO   << "Enter choice: " << RESET;
+    cout << INFO   << "Enter choice:   " << RESET;
 
     int choice; cin >> choice;
 
